@@ -1,3 +1,5 @@
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") 
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
 $directory = "$env:USERPROFILE\Pictures\Screenshots"
 $newestImage = Get-ChildItem -Path $directory -Filter *.png | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 
